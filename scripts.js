@@ -40,7 +40,15 @@ if(input === "scissors"){
     }
 }
 return outcome;
-
 }
 
-console.log(outcome(playerinput, ComputerChoice(Choice)))
+function game(outcome){
+    let userinput = prompt("What do you choose?")
+    for(i = 0; i < 5; i++){
+        let resultarray = [];
+        let result = outcome(userinput, ComputerChoice(Choice));
+        resultarray.push(result);
+    }
+
+}
+console.log(game())
