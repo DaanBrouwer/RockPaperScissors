@@ -1,54 +1,58 @@
 
-const Choice = ["Rock","Paper","Scissors"]
-function ComputerChoice(Choice){
+const Choice = ["Rock", "Paper", "Scissors"];
 
-let item = Choice[Math.floor(Math.random()*Choice.length)]
+function ComputerChoice(Choice) {
+    let item = Choice[Math.floor(Math.random() * Choice.length)];
     return item;
 }
-console.log(ComputerChoice(Choice));
 
-const playerinput = "Rock"
-function outcome(playerinput, ComputerChoice){
-input = playerinput.toLowerCase();
-inputPC = ComputerChoice.toLowerCase();
-outcome = ""
+function playerChoice() {
+    let choice = null;
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(button => {
+        choice = button.id;
+          });
+        return choice;
+}
+
+
+
+
+
+function calculateOutcome(){
+const input = playerChoice();
+const inputPC = ComputerChoice(Choice);
+console.log(input);
+console.log(inputPC)
+let outcome = ""
 if(input === inputPC){
     outcome += "It's a draw"
 }
-if(input === "rock"){
-    if(inputPC === "scissors"){
+if(input === "Rock"){
+    if(inputPC === "Scissors"){
         outcome += "Player wins since " + input + " beats " + inputPC
     }
-    if(inputPC === "paper"){
+    if(inputPC === "Paper"){
         outcome += "PC wins since " + inputPC + " beats " + input
     }
 }
-if(input === "paper"){
-    if(inputPC === "rock"){
+if(input === "Paper"){
+    if(inputPC === "Rock"){
         outcome += "Player wins since " + input + " beats " + inputPC
     }
-    if(inputPC === "scissors"){
+    if(inputPC === "Scissors"){
         outcome += "PC wins since " + inputPC + " beats " + input
     }
 }
-if(input === "scissors"){
-    if(inputPC === "paper"){
+if(input === "Scissors"){
+    if(inputPC === "Paper"){
         outcome += "Player wins since " + input + " beats " + inputPC
     }
-    if(inputPC === "rock"){
+    if(inputPC === "Rock"){
         outcome += "PC wins since " + inputPC + " beats " + input
     }
 }
-return outcome;
+return console.log(outcome);
 }
 
-function game(outcome){
-    let userinput = prompt("What do you choose?")
-    for(i = 0; i < 5; i++){
-        let resultarray = [];
-        let result = outcome(userinput, ComputerChoice(Choice));
-        resultarray.push(result);
-    }
 
-}
-console.log(game())

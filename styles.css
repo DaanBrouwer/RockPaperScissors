@@ -1,0 +1,32 @@
+body{
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.content{
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+nav{
+    font-size: xx-large;
+}
+.choices{
+    width: 100%;
+    justify-content: space-between;
+    padding: 50px;
+}
+button{
+    height: 200px;
+    width: 200px;
+    padding-top: 150px;
+    color: white;
+}
+footer{
+    flex-grow: 1;
+}

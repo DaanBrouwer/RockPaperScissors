@@ -5,7 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="scripts.js"></script>
+
+    <link rel="stylesheet" href="styles.css"></style>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <nav>
+        <b>RockPaperScissors</b>
+      </nav>
+      <div class="content">
+      <div class="textheader">
+        <h1>Make your choice</h1>
+        <p>The game is a best out of 5</p>
+      </div>
+      <div  class="choices">
+        <button onclick=calculateOutcome() id="Rock">Rock</button>
+        <button  onclick=calculateOutcome() id="Paper">Paper</button>
+        <button onclick=calculateOutcome() id="Scissors">Scissors</button>
+      </div>
+    </div>
+      <footer>The Odin Project Daan Brouwer 2023</footer>
+    </div>
+  </body>
+  <script src="scripts.js"></script>
 </html>
